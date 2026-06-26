@@ -1,13 +1,21 @@
 # human-handoff-skill
 
-A minimal Hermes skill for human-in-the-loop pauses.
+A minimal agent skill for human-in-the-loop pauses.
 
 Use it when an agent is blocked, needs manual help, faces risky side effects, or is about to waste tokens on repeated speculative attempts.
 
-## Install
+## Install in Pi
 
 ```bash
-hermes skills install xz-dev/human-handoff-skill/human-handoff --category software-development --yes
+pi install https://github.com/xz-dev/human-handoff-skill
+```
+
+Pi auto-discovers the top-level `skills/` directory and loads `skills/human-handoff/SKILL.md`, so no manual symlink or `package.json` is needed.
+
+## Install in Hermes
+
+```bash
+hermes skills install xz-dev/human-handoff-skill/skills/human-handoff --category software-development --yes
 ```
 
 ## Update
@@ -17,4 +25,4 @@ hermes skills check human-handoff
 hermes skills update human-handoff
 ```
 
-The installable skill lives in `human-handoff/SKILL.md`.
+The installable skill lives in `skills/human-handoff/SKILL.md`.
